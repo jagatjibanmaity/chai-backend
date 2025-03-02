@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
-import e from 'express';
+
 
 const app = express();
 
@@ -26,7 +26,9 @@ import userRoutes from './routes/user.routes.js';
 
 // routes declaration
 app.use("/api/v1/users",userRoutes);
+ 
+
 
 
 //https://localhost:8000/api/v1/users/register 
-export {app};
+export {app}; 

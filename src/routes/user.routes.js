@@ -18,6 +18,11 @@ router.route("/register").post(
             maxCount : 1
         }
     ]),
+    (req, res, next) => {
+        console.log("Received Files:", req.files);
+        console.log("Received Body:", req.body);
+        next(); // Pass to `registerUser`
+    },
     registerUser
 );
 

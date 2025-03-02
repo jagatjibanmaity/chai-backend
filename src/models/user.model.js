@@ -33,10 +33,12 @@ const userSchema = new Schema(
         },
         avatar :{
             type : String,//cloudinary url
-            required : true
+            //required : true
+            default: null,
         },
         coverImage :{
              type : String,//cloudinary url 
+             default: null,
         },
         watchHistory : [
             {
@@ -99,4 +101,5 @@ userSchema.methods.generateRefreshToken = function(){
 
 
 
-export default User=mongoose.model("User",userSchema);
+ const User=mongoose.model("User",userSchema);
+ export default User;
